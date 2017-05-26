@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -147,217 +147,91 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url() no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><img src="/img/photo.jpg" style="width:400px;height:400px;display:block;position:relative;"/></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p><div><b>每一个不曾起舞的日子都是对生命的辜负。</b></div></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/05/26/记录AndroidProcess调试-1/">记录AndroidProcess调试</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-05-26T07:48:42.000Z" itemprop="datePublished">
-          2017-05-26
-      </time>
-    
-    
-    | 
-    <a href='/tags/Android/'>Android</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
-记录AndroidProcess调试步骤
-第一步在AnnoProcessor中设置断点
-
-第二步修改
-gradle.properties
-第三步添加如下代码
-第一行的作用是允许gradle开启守护进程
-第二行代码是设置gradle连接的端口号.这里原先是设置为5005，但是由于报错，说端口号被占用，因此改为5010
-org.gradle.daemon=true
-org.gradle.jvmargs=-agentlib:jdwp=tra
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/05/26/记录AndroidProcess调试-1/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/05/26/记录AndroidProcess调试/"></a></h3>
-                    <span>
-                        <span class="post-meta">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
       <time datetime="2017-05-26T07:38:14.341Z" itemprop="datePublished">
           2017-05-26
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
-记录AndroidProcess调试步骤
-第一步在AnnoProcessor中设置断点
-
-第二步修改
-gradle.properties
-第三步添加如下代码
-第一行的作用是允许gradle开启守护进程
-第二行代码是设置gradle连接的端口号.这里原先是设置为5005，但是由于报错，说端口号被占用，因此改为5010
-org.gradle.daemon=true
-org.gradle.jvmargs=-agentlib:jdwp=tra
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/05/26/记录AndroidProcess调试/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1></h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/03/13/View Chapter1/">View Chapter1</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-03-13T14:40:00.000Z" itemprop="datePublished">
-          2017-03-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/Android/'>Android</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        widget chapter 1作为自定义控件的开篇，用一个简单的自定义控件来作为我们博客的一个引子。下面这个控件就是一个非常简单的进度条，这里我们愉快的命名为ProgressView。​    
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>记录AndroidProcess调试步骤</p>
+<p><strong>第一步</strong>在AnnoProcessor中设置断点</p>
+<p><img src="http://i.imgur.com/gWBxFFT.png" alt=""></p>
+<p><strong>第二步</strong>修改</p>
+<p>gradle.properties</p>
+<p><strong>第三步</strong>添加如下代码</p>
+<p>第一行的作用是允许gradle开启守护进程</p>
+<p>第二行代码是设置gradle连接的端口号.这里原先是设置为5005，但是由于报错，说端口号被占用，因此改为5010</p>
+<p><code>org.gradle.daemon=true</code></p>
+<p><code>org.gradle.jvmargs=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5010</code></p>
+<p><strong>第四步</strong>在上一步的基础上在as控制台运行如下命令：</p>
+<p><code>gradle --daemon</code></p>
+<p>你可能会有如下的报错：</p>
+<p><img src="http://i.imgur.com/gMRzcuZ.png" alt=""></p>
+<p><strong>少年莫慌，这是因为gradle没有在你的电脑中配置的缘故，因此可以将gradle改成gradlew！！！！！</strong></p>
+<p>gradlew相当于是gradle的一个包装，相当于接口，因此实现类是由，.gradle文件夹中的gradle-wrapper.properties中的distributionUrl后面指定的gradle版本决定的<strong>（PS:在这里可以看到面向接口的好处了吧）</strong></p>
+<p>运行完成之后，gradle就已经开启了守护进程，他会监听在我们刚刚配置的指定的端口号上</p>
+<p><strong>第五步</strong>配置AndroidStudio</p>
+<p><img src="http://i.imgur.com/lmCs3Wd.png" alt=""></p>
+<p><img src="http://i.imgur.com/B1tGwYV.png" alt=""></p>
+<p><img src="http://i.imgur.com/y0vgumU.png" alt=""></p>
+<p><strong>然后点击ok就可以了</strong>然后界面上就有这个配置项了，下面开始运行它，点击那个小虫子的图标，debug模式运行</p>
+<p><img src="http://i.imgur.com/RQNGkba.png" alt=""></p>
+<p><img src="http://i.imgur.com/hmokmXh.png" alt=""></p>
+<p><strong>第五步</strong>最后一步啦，在命令行执行如下命令，让其进行编译，因此我们</p>
+<p><code>gradle clean assembleDebug</code></p>
+<p>在运行的过程中</p>
+<p><img src="http://i.imgur.com/jivxUeh.png" alt=""></p>
+<p>这里可以看到我们的断点执行啦！！ok到此AnnotationProcessor的调试就到此结束了~！</p>
+</blockquote>
 
-1.extends View or ViewGroup2.重写构造方法。重写的时候系统会提示重写构造方法，而这里我们基本上重写了三种构造方法。在这里说下为什么要重写三个构造方法呢？这里与我们生成自定义控件的方式有着密切的关系———–生成方式
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/03/13/View Chapter1/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/01/09/git/">git</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-01-09T07:55:34.000Z" itemprop="datePublished">
-          2017-01-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/Simple-Record/'>Simple Record</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Read the fuck source code
-
-Overviewgit是什么东东，吼吼，我不会告诉你它就是地表最强的分布式管理系统。
-很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
-事实是，在2002年
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/01/09/git/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+    
+    <a class="pull-left" href="/2017/05/26/记录AndroidProcess调试-1/" style="float: left;">
+        ← 记录AndroidProcess调试
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/03/13/View Chapter1/">
+        View Chapter1 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'duoshuo_name';
+	window.addEventListener('load', function(){
+		(function(){
+			var dsq = document.createElement('script');
+			dsq.type = 'text/javascript';
+			dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}());
+	});
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Stay Program Read Listen And Pritice!</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
