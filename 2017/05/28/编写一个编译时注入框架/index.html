@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Keep2Iron</title>
+  <title>编写一个编译时注入框架 | Keep2Iron</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -147,47 +147,12 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url() no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><img src="/img/photo.jpg" style="width:400px;height:400px;display:block;position:relative;"/></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p><div><b>每一个不曾起舞的日子都是对生命的辜负。</b></div></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/05/28/编写一个编译时注入框架/">编写一个编译时注入框架</a></h3>
-                    <span>
-                        <span class="post-meta">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
       <time datetime="2017-05-28T09:40:00.000Z" itemprop="datePublished">
           2017-05-28
       </time>
@@ -198,165 +163,41 @@
     
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最近在折腾AnnotationProcessor，想着通过学习黄油刀来编写一个自己android编译时注入框架。这个项目的地址是我的自己编写的一个AnnotationProcessor库
-
-https://github.com/keep2iron/Fast4Android-InjectView如果觉得这篇文章有点用，请记得给个star哟
-
-学习的过程中发现了一些需要知道的api，在了解了这些api的情况下，那么我相信你可以对这个东西的掌
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/05/28/编写一个编译时注入框架/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>编写一个编译时注入框架</h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/05/26/记录AndroidProcess调试/">记录AndroidProcess调试</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-05-26T07:48:42.000Z" itemprop="datePublished">
-          2017-05-26
-      </time>
-    
-    
-    | 
-    <a href='/tags/Android/'>Android</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
-记录AndroidProcess调试步骤
-第一步在AnnoProcessor中设置断点
+        <div class="col-md-8 col-md-offset-2">
+      		<p>最近在折腾AnnotationProcessor，想着通过学习黄油刀来编写一个自己android编译时注入框架。<br>这个项目的地址是我的自己编写的一个AnnotationProcessor库</p>
+<blockquote>
+<p><strong><a href="https://github.com/keep2iron/Fast4Android-InjectView" target="_blank" rel="external">https://github.com/keep2iron/Fast4Android-InjectView</a></strong><br>如果觉得这篇文章有点用，请记得给个star哟</p>
+</blockquote>
+<p>学习的过程中发现了一些需要知道的api，在了解了这些api的情况下，那么我相信你可以对这个东西的掌握会更加的熟练和精通。</p>
+<p>下面是我用到相关api，<strong>请在了解这些api的基础上阅读代码，这样可以事半功倍哟。</strong><br><strong>javax.annotation.processing</strong><br>这个包用来声明注释处理器并允许注释处理器与注释处理工具环境通信的工具。 <table><tr><th style="text-algin:center;">类名</th><th style="text-algin:center;">说明</th></tr><tr><td>interface ExecutableElement</td><td>表示某个类或接口的方法、构造方法或初始化程序（静态或实例）,包括注释类型元素.</td></tr><tr><td>interface PackageElement</td><td>表示一个包程序元素.</td></tr><tr><td>interface TypeElement </td><td>表示一个类或接口程序元素.</td></tr><tr><td>interface TypeParameterElement </td><td>表示一般类、接口、方法或构造方法元素的形式类型参数.</td></tr><tr><td>interface     VariableElement </td><td>表示一个字段、enum 常量、方法或构造方法参数、局部变量或异常参数.</td></tr></table></p>
+<blockquote>
+<p>其中还运用到了<a href="https://github.com/square/javapoet" target="_blank" rel="external">javapoet</a>的相关api，利用这个库的api进行生成java代码。</p>
+<p>使用了@AutoService这个是google的一个类库<a href="https://github.com/google/auto" target="_blank" rel="external">Auto</a>用来进行生成META-INF信息,这样可以不用我们自己手动去配置了</p>
+</blockquote>
+<p><strong>编译时顺序图</strong>点击下图选中的gradle脚本即可生成文件</p>
+<p><img src="http://i.imgur.com/QZyE8lR.png" alt=""></p>
+<p><strong>在代码中调用bind方法的顺序图</strong></p>
+<p><img src="http://i.imgur.com/6ELqej3.png" alt=""></p>
+<p><strong>生成文件执行的顺序图</strong><br><img src="http://i.imgur.com/mZoLFXQ.png" alt=""></p>
 
-第二步修改
-gradle.properties
-第三步添加如下代码
-第一行的作用是允许gradle开启守护进程
-第二行代码是设置gradle连接的端口号.这里原先是设置为5005，但是由于报错，说端口号被占用，因此改为5010
-org.gradle.daemon=true
-org.gradle.jvmargs=-agentlib:jdwp=tra
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/05/26/记录AndroidProcess调试/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/03/13/View Chapter1/">View Chapter1</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-03-13T14:40:00.000Z" itemprop="datePublished">
-          2017-03-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/Android/'>Android</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        widget chapter 1作为自定义控件的开篇，用一个简单的自定义控件来作为我们博客的一个引子。下面这个控件就是一个非常简单的进度条，这里我们愉快的命名为ProgressView。​    
-
-1.extends View or ViewGroup2.重写构造方法。重写的时候系统会提示重写构造方法，而这里我们基本上重写了三种构造方法。在这里说下为什么要重写三个构造方法呢？这里与我们生成自定义控件的方式有着密切的关系———–生成方式
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/03/13/View Chapter1/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/01/09/git/">git</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-01-09T07:55:34.000Z" itemprop="datePublished">
-          2017-01-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/Simple-Record/'>Simple Record</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Read the fuck source code
-
-Overviewgit是什么东东，吼吼，我不会告诉你它就是地表最强的分布式管理系统。
-很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
-事实是，在2002年
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/01/09/git/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+    
+    
+    <a class="pull-right" href="/2017/05/26/记录AndroidProcess调试/">
+        记录AndroidProcess调试 →
+    </a>
+    
+</nav>
+
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Stay Program Read Listen And Pritice!</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
